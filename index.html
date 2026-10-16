@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carey Dayrit | Lizeow De DEVS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== PUBLIC SITE ===== -->
+<div id="site">
+  <header class="header" id="header">
+    <nav>
+      <a href="#home" class="logo">Lizeow De DEVS</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#guest-logs">Guest Logs</a>
+        <a href="#about-me">About Me</a>
+        <a href="#contact-me">Contact Me</a>
+        <button class="cats-btn" id="openCats" title="Carey's Cat Gallery">
+          <svg width="22" height="22" viewBox="0 0 28 28" fill="none"><path d="M8.17 3.5C4.95 3.5 2.33 6.09 2.33 9.28c0 2.57 1.02 8.68 11.07 14.86a1 1 0 0 0 1.2 0c10.05-6.18 11.07-12.29 11.07-14.86 0-3.19-2.61-5.78-5.83-5.78S14 7 14 7 11.39 3.5 8.17 3.5Z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+          <span>Cats</span>
+        </button>
+        <button class="secret" id="secret" aria-label="Decorative grass block"><span></span><span></span><span></span></button>
+      </div>
+      <button class="burger" id="burger" aria-label="Menu"><i></i><i></i><i></i></button>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <img class="hero-bg" src="assets/kwarto ni carey.jpg" alt="Minecraft-style room">
+    <img class="hero-avatar" src="assets/carey.png" alt="Carey Dayrit Minecraft avatar">
+    <div class="hero-panel">
+      <h1>Hi, I am <span>Carey Dayrit</span>,<br>Let's Build Together!</h1>
+      <p>I am a php programmer and WordPress developer!</p>
+      <p>I am looking forward to build projects while growing with you!</p>
+      <p>want to know me better? check out my bio here!</p>
+      <div class="cta">
+        <a href="#about-me" class="pill pill-light">About Me!</a>
+        <span>or</span>
+        <a href="#contact-me" class="pill pill-navy">Work with Me!</a>
+      </div>
+      <img class="hero-cat" src="assets/scottie.png" alt="Minecraft cat companion">
+    </div>
+  </section>
+
+  <section id="about-me" class="section">
+    <div class="wrap two-col">
+      <div class="avatar-card"><img src="assets/careyboy.png" alt="Carey Dayrit"></div>
+      <div>
+        <p class="kicker">About Me</p>
+        <h2>PHP Dev &amp; WordPress Builder</h2>
+        <p class="body" id="about"></p>
+        <p class="body" id="aboutSecondary"></p>
+        <div class="tags" id="skills"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section alt">
+    <div class="wrap">
+      <p class="kicker">Selected Work</p>
+      <h2>Projects I've Built</h2>
+      <div class="grid" id="projectGrid"></div>
+    </div>
+  </section>
+
+  <section id="certs" class="section certs" hidden>
+    <div class="wrap">
+      <p class="kicker">Credentials</p>
+      <h2>Certificates &amp; continued learning</h2>
+      <div class="grid small" id="certGrid"></div>
+    </div>
+  </section>
+
+  <section id="guest-logs" class="section">
+    <div class="wrap">
+      <p class="kicker">Guest Log</p>
+      <h2>Leave a message!</h2>
+      <p class="muted">Worked with me? Have a kind word? Drop it here!</p>
+      <div class="two-col top">
+        <form id="guestForm" class="form">
+          <label>Your name<input id="gName" placeholder="e.g. Maria Santos" required></label>
+          <label>Your message<textarea id="gMsg" rows="4" placeholder="Say something nice..." required></textarea></label>
+          <button class="pill pill-navy" id="gBtn" type="submit">Leave a message in the Guest log!</button>
+        </form>
+        <div id="entries" class="entries"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-me" class="section contact">
+    <div class="wrap two-col">
+      <div>
+        <p class="kicker light">Contact Me</p>
+        <h2 class="white">Let's build something together.</h2>
+        <p class="body soft">Open to freelance projects, collaborations, and full-time opportunities. If you have an idea, I'd love to hear it!</p>
+      </div>
+      <div class="contact-links">
+        <button class="email" id="copyEmail">careydayrit@email.com <small id="copyHint">Click to copy</small></button>
+        <div class="socials">
+          <a href="https://github.com/careydayrit" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/slick2" target="_blank" rel="noopener noreferrer">GitHub/slick2</a>
+          <a href="https://www.linkedin.com/in/careydayrit/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.facebook.com/tiryadryerac" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer><span class="logo-sm">Lizeow De DEVS</span><span>© 2024 Carey Dayrit · All rights reserved</span></footer>
+</div>
+
+<!-- ===== CAT GALLERY MODAL ===== -->
+<div class="gallery" id="gallery" hidden>
+  <div class="gallery-top">
+    <div><h3>Carey's Cats</h3><p id="galleryCount"></p></div>
+    <button class="round" id="closeGallery" aria-label="Close">✕</button>
+  </div>
+  <div class="gallery-grid" id="galleryGrid"></div>
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="round nav prev" id="prevCat">←</button>
+    <figure><img id="lbImg" alt=""><figcaption><b id="lbName"></b><span id="lbCap"></span><small id="lbNum"></small></figcaption></figure>
+    <button class="round nav next" id="nextCat">→</button>
+  </div>
+</div>
+
+<!-- ===== ADMIN ===== -->
+<div id="admin" hidden>
+  <main class="login" id="login">
+    <form class="login-card" id="loginForm">
+      <p class="kicker">Private workspace</p>
+      <h1>Welcome back, Carey</h1>
+      <p class="muted">Enter your password to manage your portfolio.</p>
+      <label>Email<input type="email" id="email" autocomplete="username" required autofocus></label>
+      <label>Password<input type="password" id="pw" autocomplete="current-password" required></label>
+      <p class="error" id="pwErr" hidden>Wrong email or password.</p>
+      <button class="pill pill-navy" type="submit">Unlock admin</button>
+      <a href="#home" class="back">Return to portfolio</a>
+    </form>
+  </main>
+
+  <div class="shell" id="shell" hidden>
+    <aside>
+      <a href="#home" class="brand"><i class="cube"></i>Lizeow Admin</a>
+      <nav id="adminNav">
+        <button data-s="overview" class="on">Overview</button>
+        <button data-s="cats">Cat gallery</button>
+        <button data-s="about">About &amp; skills</button>
+        <button data-s="projects">Projects</button>
+        <button data-s="certificates">Certificates</button>
+        <button data-s="guestbook">Guest log</button>
+      </nav>
+      <div class="side-bottom"><a href="#home">← View portfolio</a><button id="logout">Log out</button></div>
+    </aside>
+    <main class="admin-main">
+      <header class="topbar"><h1 id="adminTitle">Overview</h1><span class="saved" id="saved">Changes saved</span></header>
+      <div id="adminBody"></div>
+    </main>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
